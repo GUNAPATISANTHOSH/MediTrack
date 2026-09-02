@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../services';
+import { API_BASE_URL } from '../../services';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../context/AppContext';

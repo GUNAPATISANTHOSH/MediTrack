@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../services';
+import { API_BASE_URL } from '../../services';
 import { useState, useEffect } from 'react';
 import { Moon, Globe, Save } from 'lucide-react';
 export default function SettingsScreen() {

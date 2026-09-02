@@ -1,4 +1,4 @@
-import { API_BASE_URL } from '../services';
+import { API_BASE_URL } from '../../services';
 import { useState, useEffect, useCallback } from 'react';
 import { useApp } from '../context/AppContext';
 import { Bell, Check, Trash2, X, Info } from 'lucide-react';
