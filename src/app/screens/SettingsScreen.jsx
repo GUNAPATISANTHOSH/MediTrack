@@ -1,3 +1,4 @@
+import React from 'react';
 import { API_BASE_URL } from '../../services';
 import { useState, useEffect } from 'react';
 import { Moon, Globe, Save } from 'lucide-react';

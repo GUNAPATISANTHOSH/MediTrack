@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router';
 import { useApp } from '../context/AppContext';
 import { ArrowLeft, TrendingUp } from 'lucide-react';

@@ -1,5 +1,5 @@
 import { API_BASE_URL } from '../../services';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 const AppContext = createContext(undefined);
 export const useApp = () => {
     const context = useContext(AppContext);
@@ -96,7 +96,7 @@ export const AppProvider = ({ children }) => {
             console.error('Context fetch notifications failed', err);
         }
     };
-    React.useEffect(() => {
+    useEffect(() => {
         refreshPatients();
         refreshNotifications();
         // refreshDiseases(); // Implement if needed

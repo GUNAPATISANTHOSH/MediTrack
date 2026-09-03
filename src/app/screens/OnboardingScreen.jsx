@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { Database, Activity, BarChart3, ChevronRight } from 'lucide-react';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { useApp } from '../context/AppContext';
 import { ArrowLeft, Calendar } from 'lucide-react';

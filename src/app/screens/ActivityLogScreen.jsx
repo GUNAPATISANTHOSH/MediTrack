@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from 'react-router';
 import { ArrowLeft, Clock, User, LogIn } from 'lucide-react';
 export default function ActivityLogScreen() {

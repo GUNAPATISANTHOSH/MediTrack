@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import { Activity, CheckCircle } from 'lucide-react';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import { ArrowLeft, FileText, Download, CheckCircle } from 'lucide-react';
