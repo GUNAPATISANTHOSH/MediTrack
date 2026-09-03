@@ -17,8 +17,33 @@ from .schemas import (DiseaseIn, DiseaseUpdateIn, ForgotIn, LoginIn, PatientIn,
                       ProfileUpdate, RegisterIn, ResetPasswordIn, SettingsIn, VerifyOtpIn)
 
 app = FastAPI(title="MediTrack API", version="1.0.0")
-origins = os.getenv("FRONTEND_ORIGIN", "http://localhost:5173").split(",")
-app.add_middleware(CORSMiddleware, allow_origins=origins, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://medi-track-sepia.vercel.app",
+]
+
+# Also allow any additional origins configured in Render
+frontend_origin = os.getenv("FRONTEND_ORIGIN")
+
+if frontend_origin:
+    origins.extend(
+        origin.strip()
+        for origin in frontend_origin.split(",")
+        if origin.strip()
+    )
+
+# Remove duplicates
+origins = list(set(origins))
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.on_event("startup")
 def startup():
